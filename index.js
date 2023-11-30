@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config()
+require('dotenv').config();
 
 const PORT = process.env.PORT || 8000;
 const API_KEY = process.env.OPENAI_API_KEY;
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post('/completions', async (req, res) => {
-    const text_prompt = "Answer back with an identity as Voyagenius. Provide the itinerary for the city mentioned in the query here. Provide the near best route one can take in a day for the interests mentioned";
+    const text_prompt = "Answer back with an identity as Voyagenius. Provide the itinerary for the city mentioned in the query here. Provide the near best route one can take in a day for the interests mentioned. Preferred communication language is English(US)";
     const options = {
         method: 'POST',
         headers: {
