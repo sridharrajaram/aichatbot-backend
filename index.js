@@ -5,12 +5,9 @@ require('dotenv').config()
 const PORT = process.env.PORT || 8000;
 const API_KEY = process.env.OPENAI_API_KEY;
 
-
 const app = express();
 app.use(express.json());
 app.use(cors());
-
-
 
 app.post('/completions', async (req, res) => {
     const text_prompt = "Answer back with an identity as Voyagenius. Provide the itinerary for the city mentioned in the query here. Provide the near best route one can take in a day for the interests mentioned";
